@@ -14,7 +14,10 @@
     "providers": {},
     "version": 3,
     "timeout": "5m",
-    "allowedCorsOrigins": ["https://onlyoffice.github.io", "https://onlyoffice-plugins.github.io"],
+    "allowedCorsOrigins": [
+      "https://onlyoffice.github.io",
+      "https://onlyoffice-plugins.github.io"
+    ],
     "proxy": ""
   },
   "log": {
@@ -58,7 +61,9 @@
     "rules": {
       "licenseExpirationWarning": {
         "enable": false,
-        "transportType": ["email"],
+        "transportType": [
+          "email"
+        ],
         "template": {
           "title": "%s Docs license expiration warning",
           "body": "Attention! Your license is about to expire on %s.\nUpon reaching this date, you will no longer be entitled to receive personal technical support and install new Docs versions released after this date."
@@ -69,7 +74,9 @@
       },
       "licenseExpirationError": {
         "enable": false,
-        "transportType": ["email"],
+        "transportType": [
+          "email"
+        ],
         "template": {
           "title": "%s Docs license expiration warning",
           "body": "Attention! Your license expired on %s.\nYou are no longer entitled to receive personal technical support and install new Docs versions released after this date.\nPlease contact sales@onlyoffice.com to discuss license renewal."
@@ -80,7 +87,9 @@
       },
       "licenseLimitEdit": {
         "enable": false,
-        "transportType": ["email"],
+        "transportType": [
+          "email"
+        ],
         "template": {
           "title": "%s Docs license %s limit warning",
           "body": "Attention! You have reached %s%% of the %s limit set by your license."
@@ -91,7 +100,9 @@
       },
       "licenseLimitLiveViewer": {
         "enable": false,
-        "transportType": ["email"],
+        "transportType": [
+          "email"
+        ],
         "template": {
           "title": "%s Docs license %s limit warning",
           "body": "Attention! You have reached %s%% of the live viewer %s limit set by your license."
@@ -229,10 +240,14 @@
   "openpgpjs": {
     "config": {},
     "encrypt": {
-      "passwords": ["verysecretstring"]
+      "passwords": [
+        "verysecretstring"
+      ]
     },
     "decrypt": {
-      "passwords": ["verysecretstring"]
+      "passwords": [
+        "verysecretstring"
+      ]
     }
   },
   "aesEncrypt": {
@@ -260,17 +275,102 @@
     "favIconUrlSlide": "/web-apps/apps/presentationeditor/main/resources/img/favicon.ico",
     "favIconUrlPdf": "/web-apps/apps/pdfeditor/main/resources/img/favicon.ico",
     "favIconUrlDiagram": "/web-apps/apps/visioeditor/main/resources/img/favicon.ico",
-    "fileInfoBlockList": ["FileUrl"],
-    "pdfView": ["djvu", "xps", "oxps"],
-    "pdfEdit": ["pdf"],
-    "forms": ["pdf"],
-    "wordView": ["doc", "dotm", "dot", "fodt", "ott", "rtf", "mht", "mhtml", "html", "htm", "xml", "epub", "fb2", "sxw", "stw", "wps", "wpt", "pages", "docxf", "oform", "hwp", "hwpx", "md", "hml"],
-    "wordEdit": ["docx", "dotx", "docm", "odt", "txt"],
-    "cellView": ["xls", "xltm", "xlt", "fods", "ots", "sxc", "xml", "et", "ett", "numbers"],
-    "cellEdit": ["xlsx", "xlsb", "xltx", "xlsm", "ods", "csv"],
-    "slideView": ["ppt", "ppsx", "ppsm", "pps", "potm", "pot", "fodp", "otp", "sxi", "dps", "dpt", "key", "odg"],
-    "slideEdit": ["pptx", "potx", "pptm", "odp"],
-    "diagramView": ["vsdx", "vstx", "vssx", "vsdm", "vstm", "vssm"],
+    "fileInfoBlockList": [
+      "FileUrl"
+    ],
+    "pdfView": [
+      "djvu",
+      "xps",
+      "oxps"
+    ],
+    "pdfEdit": [
+      "pdf"
+    ],
+    "forms": [
+      "pdf"
+    ],
+    "wordView": [
+      "doc",
+      "dotm",
+      "dot",
+      "fodt",
+      "ott",
+      "rtf",
+      "mht",
+      "mhtml",
+      "html",
+      "htm",
+      "xml",
+      "epub",
+      "fb2",
+      "sxw",
+      "stw",
+      "wps",
+      "wpt",
+      "pages",
+      "docxf",
+      "oform",
+      "hwp",
+      "hwpx",
+      "md",
+      "hml"
+    ],
+    "wordEdit": [
+      "docx",
+      "dotx",
+      "docm",
+      "odt",
+      "txt"
+    ],
+    "cellView": [
+      "xls",
+      "xltm",
+      "xlt",
+      "fods",
+      "ots",
+      "sxc",
+      "xml",
+      "et",
+      "ett",
+      "numbers"
+    ],
+    "cellEdit": [
+      "xlsx",
+      "xlsb",
+      "xltx",
+      "xlsm",
+      "ods",
+      "csv"
+    ],
+    "slideView": [
+      "ppt",
+      "ppsx",
+      "ppsm",
+      "pps",
+      "potm",
+      "pot",
+      "fodp",
+      "otp",
+      "sxi",
+      "dps",
+      "dpt",
+      "key",
+      "odg"
+    ],
+    "slideEdit": [
+      "pptx",
+      "potx",
+      "pptm",
+      "odp"
+    ],
+    "diagramView": [
+      "vsdx",
+      "vstx",
+      "vssx",
+      "vsdm",
+      "vstm",
+      "vssm"
+    ],
     "diagramEdit": [],
     "publicKey": "",
     "modulus": "",
@@ -318,9 +418,9 @@
   "services": {
     "CoAuthoring": {
       "server": {
-        "port": 8000,
+        "port": 2000,
         "workerpercpu": 1,
-        "mode": "development",
+        "mode": "production",
         "limits_tempfile_upload": 104857600,
         "limits_image_size": 26214400,
         "limits_image_download_timeout": {
@@ -343,7 +443,10 @@
         "editorStatStorage": "",
         "assemblyFormatAsOrigin": true,
         "newFileTemplate": "../../document-templates/new",
-        "downloadFileAllowExt": ["pdf", "xlsx"],
+        "downloadFileAllowExt": [
+          "pdf",
+          "xlsx"
+        ],
         "tokenRequiredParams": true,
         "forceSaveUsingButtonWithoutChanges": false
       },
@@ -365,14 +468,14 @@
         "limits_image_types_upload": "jpg;jpeg;jpe;png;gif;bmp;svg;tiff;tif;webp;heic;heif;avif"
       },
       "sql": {
-        "type": "postgres",
+        "type": "mysql",
         "tableChanges": "doc_changes",
         "tableResult": "task_result",
         "dbHost": "localhost",
-        "dbPort": 5432,
+        "dbPort": 3366,
         "dbName": "onlyoffice",
-        "dbUser": "onlyoffice",
-        "dbPass": "onlyoffice",
+        "dbUser": "root",
+        "dbPass": "51jianqiao*()",
         "charset": "utf8",
         "connectionlimit": 10,
         "max_allowed_packet": 1048575,
@@ -453,19 +556,36 @@
         "monthUniqueUsers": "1y"
       },
       "ipfilter": {
-        "rules": [{"address": "*", "allowed": true}],
+        "rules": [
+          {
+            "address": "*",
+            "allowed": true
+          }
+        ],
         "useforrequest": false,
         "errorcode": 403
       },
       "request-filtering-agent": {
-        "allowPrivateIPAddress": false,
-        "allowMetaIPAddress": false
+        "allowPrivateIPAddress": true,
+        "allowMetaIPAddress": true
       },
       "secret": {
-        "browser": {"string": "secret", "file": ""},
-        "inbox": {"string": "secret", "file": ""},
-        "outbox": {"string": "secret", "file": ""},
-        "session": {"string": "secret", "file": ""}
+        "browser": {
+          "string": "secret",
+          "file": ""
+        },
+        "inbox": {
+          "string": "secret",
+          "file": ""
+        },
+        "outbox": {
+          "string": "secret",
+          "file": ""
+        },
+        "session": {
+          "string": "secret",
+          "file": ""
+        }
       },
       "token": {
         "enable": {
