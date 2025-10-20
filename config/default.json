@@ -471,7 +471,7 @@
         "type": "mysql",
         "tableChanges": "doc_changes",
         "tableResult": "task_result",
-        "dbHost": "localhost",
+        "dbHost": "127.0.0.1",
         "dbPort": 3366,
         "dbName": "onlyoffice",
         "dbUser": "root",
