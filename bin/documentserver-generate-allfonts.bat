@@ -28,20 +28,6 @@ ECHO | SET /p="Generating presentation themes, please wait..."
   --src="%~dp0\..\sdkjs\slide\themes" ^
   --output="%~dp0\..\sdkjs\common\Images"
 
-"%~dp0\..\server\tools\allthemesgen.exe" ^
-  --converter-dir="%~dp0\..\server\FileConverter\bin" ^
-  --src="%~dp0\..\sdkjs\slide\themes" ^
-  --output="%~dp0\..\sdkjs\common\Images" ^
-  --postfix="ios" ^
-  --params="280,224"
-
-"%~dp0\..\server\tools\allthemesgen.exe" ^
-  --converter-dir="%~dp0\..\server\FileConverter\bin" ^
-  --src="%~dp0\..\sdkjs\slide\themes" ^
-  --output="%~dp0\..\sdkjs\common\Images" ^
-  --postfix="android" ^
-  --params="280,224"
-
 ECHO Done
 
 ECHO | SET /p="Generating js caches, please wait..."
@@ -49,13 +35,3 @@ ECHO | SET /p="Generating js caches, please wait..."
 "%~dp0\..\server\FileConverter\bin\x2t.exe" -create-js-cache
 
 ECHO Done
-
-rem Restart web-site and converter
-IF NOT "%ONLYOFFICE_DATA_CONTAINER%"=="true" (  
-  net stop DsDocServiceSvc
-  net start DsDocServiceSvc
-
-  net stop DsConverterSvc
-  net start DsConverterSvc
-  call "%~dp0\documentserver-flush-cache.bat"
-)
